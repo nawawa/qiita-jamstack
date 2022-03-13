@@ -6,7 +6,7 @@ export default {
     titleTemplate: 'nawawa',
     title: 'nawawa',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
