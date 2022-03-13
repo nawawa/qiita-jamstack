@@ -1,6 +1,16 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors' 
 
 export default {
+
+  privateRuntimeConfig: {
+    apiURL: process.env.API_URL,
+    apiSecret: process.env.API_SECRET
+  },
+  publicRuntimeConfig: {
+    apiURL: process.env.NODE_ENV !== 'production' ? process.env.API_URL : '',
+    apiSecret: process.env.NODE_ENV !== 'production' ? process.env.API_SECRET : ''
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: 'nawawa',
