@@ -1,7 +1,9 @@
-import colors from 'vuetify/es5/util/colors' 
+import colors from 'vuetify/es5/util/colors'
+import axios from 'axios'
 
 export default {
 
+  // 環境変数
   privateRuntimeConfig: {
     apiURL: process.env.API_URL,
     apiSecret: process.env.API_SECRET
@@ -10,6 +12,13 @@ export default {
     apiURL: process.env.NODE_ENV !== 'production' ? process.env.API_URL : '',
     apiSecret: process.env.NODE_ENV !== 'production' ? process.env.API_SECRET : ''
   },
+
+  // 動的ルーティングパスの設定
+  // generate: {
+  //   async routes() {
+      
+  //   }
+  // },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
