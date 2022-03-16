@@ -1,6 +1,7 @@
 <template>
   <main>
     <h1>{{title}}</h1>
+    <div>{{body}}</div>
   </main>
 </template>
 
