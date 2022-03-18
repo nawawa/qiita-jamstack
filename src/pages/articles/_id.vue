@@ -22,15 +22,19 @@ export default {
   },
   computed: {
     stylingCodeBlock() {
-      return function(elements, styles) {
+      return (elements, styles) => {
           Array.prototype.forEach.call(elements, function(el) {
           el.style = styles;
         });
       };
-    }
+    },
   },
   mounted() {
-
+    /**
+     * 
+     * Qiitaからコピってきたスタイルを当てる
+     * 
+     */
     this.stylingCodeBlock(
       document.getElementsByClassName('code-frame'), 
       `
@@ -84,7 +88,162 @@ export default {
       `
     );
 
-    const span_c_elements = document.getElementsByClassName('c');
+    this.stylingCodeBlock(
+      document.getElementsByClassName('c'),
+      `
+        color: #9dabae;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('c1'),
+      `
+        color: #9dabae;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('k'),
+      `
+        color: #ebd247;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('kd'),
+      `
+        color: #ebd247;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('s'),
+      `
+        color: #41b7d7;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('s1'),
+      `
+        color: #41b7d7;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('o'),
+      `
+        color: #ff8095;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('se'),
+      `
+        color: #a980f5;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('nl'),
+      `
+        color: #e3e3e3;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('nf'),
+      `
+        color: #8bdf4c;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('dl'),
+      `
+        color: #41b7d7;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('m'),
+      `
+        color: #a980f5;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('m1'),
+      `
+        color: #a980f5;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('p'),
+      `
+        color: #e3e3e3;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('ell'),
+      `
+        border-bottom: 2px dotted #c01b1b;
+        color: #ddd;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('hdl'),
+      `
+        display: block;
+        background-color: rgba(255,128,149,.3);
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('hil'),
+      `
+        display: block;
+        background-color: rgba(139,223,76,.3);
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('na'),
+      `
+        background-color: transparent;
+        font-weight: normal;
+        color: #8bdf4c;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('nb'),
+      `
+        color: #e3e3e3;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('nc'),
+      `
+        background-color: transparent;
+        font-weight: normal;
+        color: #8bdf4c;
+      `
+    );
+
+    this.stylingCodeBlock(
+      document.getElementsByClassName('nx'),
+      `
+        background-color: transparent;
+        font-weight: normal;
+        color: #8bdf4c;
+      `
+    );
+
   }
 }
 </script>
