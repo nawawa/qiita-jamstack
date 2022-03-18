@@ -1,10 +1,11 @@
 <template>
   <article>
+    <p>{{ user_id }}</p>
     <CommonArticleHeader>
-      <template v-slot:title>{{title}}</template>
+      <template v-slot:title>{{article.title}}</template>
     </CommonArticleHeader>
     <CommonArticleBody>
-      <div v-html='rendered_body' />
+      <div v-html='article.rendered_body' />
     </CommonArticleBody>
   </article>
 </template>
@@ -13,18 +14,16 @@
 import axios from 'axios'
 
 export default {
-  async asyncData({ params, $config: { apiSecret, apiURL }  }) {
-    const { data } = await axios.get(
+  async asyncData({ params, $config: { apiSecret, apiURL }, redirect }) {
+    const {data} = await axios.get(
       `${apiURL}/items/${params.id}`,
       {
         headers: { Authorization: `Bearer ${apiSecret}` }
       }
     )
-    return data
+    return (data.user.id === 'inarikawa') ?
+      { article: data, user_id: data.user.id }:
+      redirect({ path: '/404'});
   },
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
