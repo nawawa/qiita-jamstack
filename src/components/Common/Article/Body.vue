@@ -239,6 +239,17 @@ export default {
         border-style: none;
       `
     );
+
+    this.styling(
+      document.getElementsByTagName('hr'),
+      `
+        margin: 3em 0;
+        border: 0;
+        height: 2px;
+        background-color: #ddd;
+        overflow: visible;
+      `
+    );
   }
 }
 </script>
