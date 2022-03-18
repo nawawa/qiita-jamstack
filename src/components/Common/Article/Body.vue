@@ -250,6 +250,36 @@ export default {
         overflow: visible;
       `
     );
+
+    this.styling(
+      document.getElementsByTagName('h2'),
+      `
+        font-size: 1.6em;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.1em;
+        font-weight: bold;
+        line-height: 1.5;
+        font-feature-settings: "palt";
+        margin-top: 2.2em;
+        margin-bottom: 2.4rem;
+        cursor: pointer;
+        position: relative;
+      `
+    );
+
+    this.styling(
+      document.getElementsByTagName('h3'),
+      `
+        font-size: 1.4em;
+        font-weight: bold;
+        line-height: 1.5;
+        font-feature-settings: "palt";
+        margin-top: 2.2em;
+        margin-bottom: 2.4rem;
+        cursor: pointer;
+        position: relative;
+      `
+    );
   }
 }
 </script>
