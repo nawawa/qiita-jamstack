@@ -20,5 +20,6 @@ export default {
 <style lang="scss" scoped>
   p {
     font-size: 14px;
+    margin: 0 !important;
   }
 </style>
