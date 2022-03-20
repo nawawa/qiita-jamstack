@@ -1,7 +1,9 @@
 <template>
-  <section>
-    <slot />
-  </section>
+  <v-container>
+    <section>
+      <slot />
+    </section>
+  </v-container>
 </template>
 
 <script>

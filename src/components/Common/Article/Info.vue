@@ -1,10 +1,10 @@
 <template>
  <v-container>
    <v-row dense no-gutters>
-     <v-col cols='3'>
+     <v-col cols='2'>
        <slot name="created_at" />
      </v-col>
-     <v-col cols='3'>
+     <v-col cols='2'>
        <slot name="updated_at" />
      </v-col>
    </v-row>
