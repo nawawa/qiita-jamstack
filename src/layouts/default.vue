@@ -9,7 +9,6 @@
       app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <p>{{ drawer }}</p>
     </v-app-bar>
 
     <v-main>
@@ -19,7 +18,7 @@
     </v-main>
 
     <LayoutsFooter />
-    
+
   </v-app>
 </template>
 
