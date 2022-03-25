@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <section>
-      <slot />
+      <div v-bind="$attrs" />
     </section>
   </v-container>
 </template>

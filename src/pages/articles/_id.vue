@@ -12,11 +12,9 @@
         <template #u_date>{{updated_at.date}}</template>
         <template #title>{{article.title}}</template>
       </CommonArticleHeader>
-      <CommonArticleSection>
-        <div v-html='article.rendered_body' />
-      </CommonArticleSection>
+      <CommonArticleSection v-html='article.rendered_body' />
     </article>
-    <CommonArticleFooter />
+    <CommonArticleAside />
   </div>
 </template>
 
