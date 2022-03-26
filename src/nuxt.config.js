@@ -15,19 +15,7 @@ export default {
 
   // 動的ルーティングパスの設定
   generate: {
-    async routes(apiSecret, apiURL) {
-      const pages = await axios
-        .get(`${apiURL}/users/inarikawa/items?page=1&per_page=20`, {
-          headers: { Authorization: `Bearer ${apiSecret}` }
-        })
-        .then((res) =>
-          res.data.contents.map((content) => ({
-            route: `/${content.id}`,
-            payload: content
-          }))
-        )
-      return pages
-    }
+    fallback: true,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
