@@ -4,7 +4,7 @@
       <v-card class="logo py-4 d-flex justify-center">
         <NuxtLogo />
         <VuetifyLogo />
-        <NuxtLink to:='/articles/3214f023efd1536d6126'>
+        <NuxtLink to='/articles/3214f023efd1536d6126'>
           記事へのリンクテスト
         </NuxtLink>
       </v-card>
