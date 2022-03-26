@@ -5,6 +5,8 @@
         <NuxtLogo />
         <VuetifyLogo />
         <NuxtLink to:='/articles/3214f023efd1536d6126'>
+          記事へのリンクテスト
+        </NuxtLink>
       </v-card>
       <v-card>
         <v-card-title class="headline">
