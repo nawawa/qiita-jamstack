@@ -13,9 +13,8 @@ export default {
     apiSecret: process.env.NODE_ENV !== 'production' ? process.env.API_SECRET : ''
   },
 
-  // 動的ルーティングパスの設定
   generate: {
-    fallback: true,
+    fallback: true, // 不明なパスへのアクセス時もNuxtコンポーネントで解決
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
