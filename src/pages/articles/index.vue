@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <CommonArticleListContainer :articles="articles" />
+    <NuxtLink :to="`/articles/page/${nextPage()}`">NEXT</NuxtLink>
   </v-container>
 </template>
 
@@ -16,7 +17,12 @@ export default {
         headers: { Authorization: `Bearer ${apiSecret}` }
       }
     )
-    return { articles: data };
+    return { articles: data, count: data.length, page_number: Number(page_number) };
   },
+  methods: {
+    nextPage() {
+      return this.page_number + 1;
+    }
+  }
 }
 </script>
