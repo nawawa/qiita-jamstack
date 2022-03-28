@@ -13,6 +13,16 @@ export default {
     apiSecret: process.env.NODE_ENV !== 'production' ? process.env.API_SECRET : ''
   },
 
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/articles/page/:p',
+        component: resolve(__dirname, 'pages/articles/index.vue'),
+        name: 'page',
+      })
+    },
+  },
+
   generate: {
     fallback: true, // 不明なパスへのアクセス時もNuxtコンポーネントで解決
   },

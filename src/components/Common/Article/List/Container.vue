@@ -2,9 +2,9 @@
   <div>
     <div v-for="article in articles" :key="article.id">
       <NuxtLink :to="`/articles/${article.id}`">
-        <CommonArticleCard>
+        <CommonArticleListCard>
           {{ article.title }}
-        </CommonArticleCard>
+        </CommonArticleListCard>
       </NuxtLink>
     </div>
   </div>
@@ -15,7 +15,12 @@ export default{
   props: {
     articles: {
       type: Array
-    }
-  }
+    },
+    // page_number: {
+    //   type: Number,
+    //   require: false,
+    //   default: 1,
+    // }
+  },
 }
 </script>

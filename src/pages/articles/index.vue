@@ -8,9 +8,10 @@
 import axios from 'axios';
 
 export default {
-  async asyncData({ $config: { apiSecret, apiURL } }) {
+  async asyncData({ params, $config: { apiSecret, apiURL } }) {
+    const page_number = params.p || 1
     const {data} = await axios.get(
-      `${apiURL}/users/inarikawa/items?page=1&per_page=10`,
+      `${apiURL}/users/inarikawa/items?page=${page_number}&per_page=10`,
       {
         headers: { Authorization: `Bearer ${apiSecret}` }
       }
