@@ -12,9 +12,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
 
     <LayoutsFooter />
