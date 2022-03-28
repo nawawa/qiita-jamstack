@@ -1,6 +1,8 @@
 <template>
   <v-container>
     <CommonArticleListContainer :articles="articles" />
+    <NuxtLink to="/articles/page/2">2</NuxtLink>
+    <NuxtLink to="/articles/page/3">3</NuxtLink>
   </v-container>
 </template>
 
