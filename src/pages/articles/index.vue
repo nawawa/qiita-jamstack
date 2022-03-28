@@ -18,10 +18,5 @@ export default {
     )
     return { articles: data, count: data.length, page_number: Number(page_number) };
   },
-  methods: {
-    nextPage() {
-      return this.page_number + 1;
-    }
-  }
 }
 </script>
