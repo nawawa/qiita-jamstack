@@ -1,6 +1,11 @@
 <template>
   <v-container>
     <CommonArticleListContainer :articles="articles" />
+    <div v-if="pagination">
+      <NuxtLink v-for="number in length" :key="number" :to="`/articles/page/${number}`">
+        {{number}}
+      </NuxtLink>
+    </div>
   </v-container>
 </template>
 
@@ -18,10 +23,16 @@ export default {
     )
     return { articles: data, count: data.length, page_number: Number(page_number) };
   },
-  methods: {
-    nextPage() {
-      return this.page_number + 1;
+  computed: {
+    pagination() {
+      return this.$store.state.article.pagination;
+    },
+    article_total_count() {
+      return this.$store.state.user.user.items_count;
+    },
+    length() {
+      return Math.ceil(((this.article_total_count) / 10));
     }
-  }
+  },
 }
 </script>
