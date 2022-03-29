@@ -1,9 +1,9 @@
 export const state = () => ({
-  pagination: Boolean,
+  is_paginated: false,
 });
 
 export const mutations = {
-  pagination(state, paginated) {
-    state.pagination = paginated;
+  set_is_paginated(state, is_paginated) {
+    state.is_paginated = is_paginated;
   },
 }
