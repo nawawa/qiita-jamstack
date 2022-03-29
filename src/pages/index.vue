@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <CommonArticleListContainer :articles="articles" />
-    <NuxtLink v-if="pagination" to="/articles/page/2">
+    <NuxtLink v-if="is_paginated" to="/articles/page/2">
       READ MORE
     </NuxtLink>
   </v-container>
@@ -11,22 +11,16 @@
 import axios from 'axios';
 
 export default {
-  data() {
-    return {
-      articles: {},
-      user_data: {},
-    }
-  },
   mounted() {
     this.$store.commit('user/add', this.user_data);
-    this.$store.commit('article/pagination', (this.$store.state.user.user.items_count > this.page_articles_count));
+    this.$store.commit('article/set_is_paginated', (this.$store.state.user.user.items_count > this.page_articles_count));
   },
   computed: {
     user() {
       return this.$store.state.user.user
     },
-    pagination() {
-      return this.$store.state.article.pagination;
+    is_paginated() {
+      return this.$store.state.article.is_paginated;
     }
   },
   async asyncData({ $config: { apiSecret, apiURL } }) {
