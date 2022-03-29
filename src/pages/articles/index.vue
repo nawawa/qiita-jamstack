@@ -11,8 +11,8 @@
 
 <script>
 import axios from 'axios';
-
 export default {
+  middleware: 'qiita_api',
   mounted() {
     this.$store.commit('user/add', this.user_data);
     this.$store.commit('article/set_is_paginated', (this.$store.state.user.user.items_count > this.page_articles_count));
