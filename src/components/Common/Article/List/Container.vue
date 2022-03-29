@@ -16,11 +16,6 @@ export default{
     articles: {
       type: Array
     },
-    // page_number: {
-    //   type: Number,
-    //   require: false,
-    //   default: 1,
-    // }
   },
 }
 </script>
