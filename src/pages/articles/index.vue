@@ -11,18 +11,14 @@
 
 <script>
 import axios from 'axios';
-
 export default {
-  mounted() {
-    this.$store.commit('user/add', this.user_data);
-    this.$store.commit('article/set_is_paginated', (this.$store.state.user.user.items_count > this.page_articles_count));
-  },
+  middleware: 'qiita_api', // TODO:ミドルウェアで共通化する（今はトップの方のindex.vueではVuexに入れてるけど、無意味）
   computed: {
-    is_paginated() {
-      return this.$store.state.article.is_paginated;
-    },
     article_total_count() {
-      return this.$store.state.user.user.items_count;
+      return this.user_data.items_count;
+    },
+    is_paginated() {
+      return this.article_total_count > this.page_articles_count;
     },
     length() {
       return Math.ceil(((this.article_total_count) / this.page_articles_count));
