@@ -87,6 +87,16 @@ export default {
           warning: `#B6B480`,
           error: `#AB7878`,
           success: `#539164`
+        },
+        light: {
+          background: `#F5F5F5`,
+          primary: `#7399C5`,
+          accent: `#504A4A`,
+          secondary: `#EBDABF`,
+          info: `#BDE4DB`,
+          warning: `#EBEAC3`,
+          error: `#EACDC3`,
+          success: `#C0ECCA`
         }
       }
     }
