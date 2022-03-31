@@ -26,7 +26,7 @@ export default {
     this.styling(
       document.getElementsByClassName('code-frame'), 
       `
-        background-color: #364549;
+        background-color: #4D536B;
         color: #e3e3e3;
         margin: 1.5em -32px;
         padding: 1em 32px;
