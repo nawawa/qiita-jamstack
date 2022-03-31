@@ -23,10 +23,11 @@ export default {
      * Qiitaからコピってきたスタイルを当てる
      * 
      */
+    // ${$vuetify.theme.themes[theme].accent}
     this.styling(
       document.getElementsByClassName('code-frame'), 
       `
-        background-color: #4D536B;
+        background-color: var(--v-accent-base);
         color: #e3e3e3;
         margin: 1.5em -32px;
         padding: 1em 32px;
@@ -34,7 +35,6 @@ export default {
         position: relative;
       `
     );
-
     this.styling(
       document.getElementsByTagName('pre'), 
       `
@@ -61,7 +61,7 @@ export default {
     );
 
     this.styling(
-      document.querySelectorAll('pre > code'), 
+    document.querySelectorAll('pre > code'), 
       `
         display: block;
         width: -webkit-fit-content;
@@ -282,7 +282,7 @@ export default {
         position: relative;
       `
     );
-  }
+  },
 }
 </script>
 

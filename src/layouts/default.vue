@@ -30,9 +30,13 @@ export default {
       drawer: false,
     }
   },
+  mounted() {
+    const browser_theme = (window.matchMedia('(prefers-color-scheme: dark)').matches === true)? "dark": "light";
+    this.$store.commit('theme/toggle', browser_theme);
+  },
   computed: {
     theme() {
-      return this.$vuetify.theme.dark ? "dark" : "light";
+      return this.$store.state.theme.theme;
     },
   },
 }

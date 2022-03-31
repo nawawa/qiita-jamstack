@@ -2,6 +2,10 @@
 共通スタイル
 */
 
+body {
+  background: var(--v-background-base);
+}
+
 p {
   letter-spacing: 0.03em !important;
 }
