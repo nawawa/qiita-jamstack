@@ -79,9 +79,9 @@ export default {
       dark: true,
       themes: {
         dark: {
-          background: `#353D58`,
-          primary: `#6383A9`,
-          accent: `#586694`,
+          background: `#282F43`,
+          primary: `#6C8CB3`,
+          accent: `#353B51`,
           secondary: `#9D7D66`,
           info: `#56A597`,
           warning: `#B6B480`,
