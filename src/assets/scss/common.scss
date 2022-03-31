@@ -1,0 +1,14 @@
+/*
+共通スタイル
+*/
+
+p {
+  letter-spacing: 0.03em !important;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    opacity: 0.7;
+  }
+}
