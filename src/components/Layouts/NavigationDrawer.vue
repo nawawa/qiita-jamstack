@@ -1,10 +1,10 @@
 <template>
   <v-navigation-drawer
+    color="background" 
     app
     v-model="drawerStatus"
     right
     fixed
-    floating
     temporary
   >
     <slot />
