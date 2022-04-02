@@ -5,9 +5,12 @@
     v-model="drawerStatus"
     right
     fixed
-    temporary
+    temporary 
   >
-    <slot />
+    <CommonNavigationDrawerPageList />
+    <template v-slot:append>
+      <CommonNavigationDrawerIconList />
+    </template>
   </v-navigation-drawer>
 </template>
 
