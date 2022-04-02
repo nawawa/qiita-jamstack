@@ -91,7 +91,7 @@ export default {
         light: {
           background: `#EEEEEE`,
           primary: `#7399C5`,
-          accent: `#504A4A`,
+          accent: `#4E4747`,
           secondary: `#EBDABF`,
           info: `#BDE4DB`,
           warning: `#EBEAC3`,
