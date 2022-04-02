@@ -23,7 +23,6 @@ export default {
   data () {
     return {
       drawer: false,
-      title: 'nawamemo'
     }
   },
   mounted() {
