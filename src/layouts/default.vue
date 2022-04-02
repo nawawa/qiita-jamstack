@@ -3,16 +3,11 @@
 
     <LayoutsNavigationDrawer v-model="drawer" />
 
-    <v-app-bar
-      :style="{background: $vuetify.theme.themes[theme].background}" 
-      :clipped-left="clipped"
-      fixed 
-      flat 
-      app
-    >
+    <LayoutsHeaderBody>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-app-bar-nav-icon @click="toggleTheme" />
-    </v-app-bar>
+      <LayoutsHeaderTitle />
+      <LayoutsHeaderToggleThemeSwitch :dark="this.$vuetify.theme.dark" @toggleTheme="toggleTheme" />
+    </LayoutsHeaderBody>
 
     <v-main>
       <Nuxt />
@@ -27,8 +22,8 @@
 export default {
   data () {
     return {
-      clipped: false,
       drawer: false,
+      title: 'nawamemo'
     }
   },
   mounted() {
