@@ -257,7 +257,7 @@ export default {
       document.getElementsByTagName('h2'),
       `
         font-size: 1.6em;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1.3px solid var(--v-accent-base);
         padding-bottom: 0.1em;
         font-weight: bold;
         line-height: 1.5;
