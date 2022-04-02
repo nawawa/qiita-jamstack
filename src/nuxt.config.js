@@ -67,7 +67,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-webfontloader'
   ],
+
+  // GoogleFont読み込み
+  webfontloader: {
+    google: {
+      families: ['Raleway:400'] 
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -79,6 +87,7 @@ export default {
       dark: true,
       themes: {
         dark: {
+          font: '#F5F5F5',
           background: `#282F43`,
           primary: `#6C8CB3`,
           accent: `#353B51`,
@@ -89,6 +98,7 @@ export default {
           success: `#539164`
         },
         light: {
+          font: '#473838',
           background: `#EEEEEE`,
           primary: `#7399C5`,
           accent: `#4E4747`,
