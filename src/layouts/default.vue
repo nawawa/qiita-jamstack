@@ -6,8 +6,7 @@
     <LayoutsHeaderBody>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <LayoutsHeaderTitle />
-      <!-- <v-app-bar-nav-icon @click="toggleTheme" /> -->
-      <LayoutsHeaderToggleThemeSwitch @click="toggleTheme" />
+      <LayoutsHeaderToggleThemeSwitch :dark="this.$vuetify.theme.dark" @toggleTheme="toggleTheme" />
     </LayoutsHeaderBody>
 
     <v-main>
