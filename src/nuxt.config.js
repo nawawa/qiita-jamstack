@@ -89,7 +89,7 @@ export default {
           success: `#539164`
         },
         light: {
-          background: `#F5F5F5`,
+          background: `#EEEEEE`,
           primary: `#7399C5`,
           accent: `#504A4A`,
           secondary: `#EBDABF`,
