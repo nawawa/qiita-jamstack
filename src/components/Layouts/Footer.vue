@@ -1,5 +1,5 @@
 <template>
-  <CommonFooterBody>
+  <CommonFooterBody v-bind="$attrs">
     
   </CommonFooterBody>
 </template>

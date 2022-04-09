@@ -1,9 +1,8 @@
 <template>
-  <v-app :style="{background: $vuetify.theme.themes[theme].background}">
+  <v-app :style="{background: $vuetify.theme.themes[mode].background}">
+    <LayoutsNavigationDrawer :mode="mode" v-model="drawer" />
 
-    <LayoutsNavigationDrawer v-model="drawer" />
-
-    <LayoutsHeaderBody>
+    <LayoutsHeaderBody :mode="mode">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <LayoutsHeaderTitle />
       <LayoutsHeaderToggleThemeSwitch :dark="this.$vuetify.theme.dark" @toggleTheme="toggleTheme" />
@@ -13,7 +12,7 @@
       <Nuxt />
     </v-main>
 
-    <LayoutsFooter />
+    <LayoutsFooter :mode="mode" />
 
   </v-app>
 </template>
@@ -28,20 +27,18 @@ export default {
   mounted() {
     const is_dark_mode = this.checkBrowserIsDarkTheme;
     this.$vuetify.theme.dark = is_dark_mode;
-    this.$store.commit('theme/toggle', (is_dark_mode === true) ? "dark": "light");
   },
   computed: {
-    theme() {
-      return this.$store.state.theme.theme;
-    },
     checkBrowserIsDarkTheme() {
       return (window.matchMedia('(prefers-color-scheme: dark)').matches === true);
     },
+    mode() {
+      return (this.$vuetify.theme.dark === true) ? "dark": "light";
+    }
   },
   methods: {
     toggleTheme(event) {
       this.$vuetify.theme.dark = (this.$vuetify.theme.dark = !this.$vuetify.theme.dark);
-      this.$store.commit('theme/toggle', (this.theme === "dark") ? "light": "dark");
     },
   }
 }

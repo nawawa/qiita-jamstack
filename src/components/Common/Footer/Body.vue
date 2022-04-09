@@ -1,6 +1,6 @@
 <template>
   <v-footer
-    :style="{background: $vuetify.theme.themes[theme].background}" 
+    :style="{background: $vuetify.theme.themes[mode].background}" 
     :absolute="!fixed" 
     height="60"
     app
@@ -11,15 +11,13 @@
 
 <script>
 export default {
+  props: {
+    mode: String
+  },
   data() {
     return {
       fixed: false,
     }
-  },
-  computed: {
-    theme() {
-      return this.$store.state.theme.theme;
-    },
   },
 }
 </script>
