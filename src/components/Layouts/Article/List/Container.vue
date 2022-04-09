@@ -6,6 +6,7 @@
           :title="article.title"
           :created_at="getYearMonthDate(article.created_at)"
           :updated_at="getYearMonthDate(article.updated_at)"
+          :tags="article.tags"
         />
       </NuxtLink>
     </div>
