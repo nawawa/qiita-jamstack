@@ -1,5 +1,5 @@
 <template>
-  <CommonHeaderBody>
+  <CommonHeaderBody v-bind="$attrs">
     <slot />
   </CommonHeaderBody>
 </template>
