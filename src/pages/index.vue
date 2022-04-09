@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <CommonArticleListContainer :articles="articles" />
+    <LayoutsArticleListContainer :articles="articles" />
     <NuxtLink v-if="is_paginated" to="/articles/page/2">
       READ MORE
     </NuxtLink>
