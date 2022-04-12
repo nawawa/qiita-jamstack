@@ -1,13 +1,14 @@
 <template>
   <v-card
     tile 
+    flat
   >
     <v-card-title>
       {{ title }}
     </v-card-title>
     <v-card-text>
       <v-chip-group>
-        <v-chip v-for="tag in tags" :key="tag">
+        <v-chip v-for="tag in tags" :key="tag.length">
           {{ tag.name }}
         </v-chip>
       </v-chip-group>
