@@ -1,6 +1,7 @@
 <template>
   <v-card
     tile 
+    flat
   >
     <v-card-title>
       {{ title }}
