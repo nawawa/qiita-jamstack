@@ -1,5 +1,5 @@
 <template>
-  <v-row dense>
+  <v-row>
     <slot />
   </v-row>
 </template>
