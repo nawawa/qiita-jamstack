@@ -1,6 +1,6 @@
 <template>
   <CommonArticleListContainer>
-    <div v-for="article in articles" :key="article.id">
+    <v-col cols="6" v-for="article in articles" :key="article.id">
       <NuxtLink :to="`/articles/${article.id}`">
         <CommonArticleListCard
           :title="article.title"
@@ -9,7 +9,7 @@
           :tags="article.tags"
         />
       </NuxtLink>
-    </div>
+    </v-col>
   </CommonArticleListContainer>
 </template>
 

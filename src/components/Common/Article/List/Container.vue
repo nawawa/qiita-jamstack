@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-row dense>
     <slot />
-  </div>
+  </v-row>
 </template>
 
 <script>
