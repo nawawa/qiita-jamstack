@@ -260,8 +260,8 @@ export default {
         font-weight: bold;
         line-height: 1.5;
         font-feature-settings: "palt";
-        margin-top: 2.2em;
-        margin-bottom: 2.4rem;
+        margin-top: 2em;
+        margin-bottom: 2rem;
         cursor: pointer;
         position: relative;
       `
@@ -274,8 +274,8 @@ export default {
         font-weight: bold;
         line-height: 1.5;
         font-feature-settings: "palt";
-        margin-top: 2.2em;
-        margin-bottom: 2.4rem;
+        margin-top: 2em;
+        margin-bottom: 2rem;
         cursor: pointer;
         position: relative;
       `
