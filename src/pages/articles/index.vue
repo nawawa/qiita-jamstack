@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <CommonArticleListContainer :articles="articles" />
+    <LayoutsArticleListContainer :articles="articles" />
     <div v-if="is_paginated">
       <NuxtLink v-for="number in length" :key="number" :to="`/articles/page/${number}`">
         {{number}}
