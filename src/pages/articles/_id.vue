@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <article>
       <CommonArticleHeader>
         <template #type_create>{{'投稿日'}}</template>
@@ -15,7 +15,7 @@
       <CommonArticleSection v-html='article.rendered_body' />
     </article>
     <CommonArticleAside />
-  </div>
+  </v-container>
 </template>
 
 <script>

@@ -1,9 +1,7 @@
 <template>
-  <v-container>
-    <section>
-      <div v-bind="$attrs" />
-    </section>
-  </v-container>
+  <section>
+    <div v-bind="$attrs" />
+  </section>
 </template>
 
 <script>
