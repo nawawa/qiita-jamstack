@@ -53,7 +53,7 @@ export default {
     this.styling(
       document.getElementsByClassName('highlight'), 
       `
-        padding: .5em;
+        padding: .3em;
         overflow-x: auto;
       `
     );
