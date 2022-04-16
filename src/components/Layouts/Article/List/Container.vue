@@ -1,6 +1,6 @@
 <template>
   <CommonArticleListContainer>
-    <v-col cols="6" v-for="article in articles" :key="article.id">
+    <v-col :cols="xs" v-for="article in articles" :key="article.id">
       <NuxtLink :to="`/articles/${article.id}`">
         <CommonArticleListCard
           :title="article.title"
@@ -27,6 +27,10 @@ export default{
         return date.getFullYear() + '年' + date.getMonth() + '月' + date.getDate() + '日'
       }
     },
+    xs() {
+      const breakpoint = this.$vuetify.breakpoint.name;
+      return (breakpoint === `xs`) ? 12: 6;
+    }
   }
 }
 </script>
