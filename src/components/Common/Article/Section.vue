@@ -27,8 +27,8 @@ export default {
       `
         background-color: var(--v-accent-base);
         color: #e3e3e3;
-        margin: 1.5em -32px;
-        padding: 1em 32px;
+        margin: 1.5em 0;
+        padding: 1em 1em;
         font-size: .9em;
         position: relative;
       `
