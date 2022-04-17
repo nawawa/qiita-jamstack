@@ -27,8 +27,8 @@ export default {
       `
         background-color: var(--v-accent-base);
         color: #e3e3e3;
-        margin: 1.5em -32px;
-        padding: 1em 32px;
+        margin: 1.5em 0;
+        padding: 1em 1em;
         font-size: .9em;
         position: relative;
       `
@@ -53,7 +53,7 @@ export default {
     this.styling(
       document.getElementsByClassName('highlight'), 
       `
-        padding: .5em;
+        padding: .3em;
         overflow-x: auto;
       `
     );
@@ -260,8 +260,8 @@ export default {
         font-weight: bold;
         line-height: 1.5;
         font-feature-settings: "palt";
-        margin-top: 2.2em;
-        margin-bottom: 2.4rem;
+        margin-top: 2em;
+        margin-bottom: 2rem;
         cursor: pointer;
         position: relative;
       `
@@ -274,8 +274,8 @@ export default {
         font-weight: bold;
         line-height: 1.5;
         font-feature-settings: "palt";
-        margin-top: 2.2em;
-        margin-bottom: 2.4rem;
+        margin-top: 2em;
+        margin-bottom: 2rem;
         cursor: pointer;
         position: relative;
       `

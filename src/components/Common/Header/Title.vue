@@ -24,7 +24,7 @@ export default {
   $header-font-spacing: 0.1em !important;
 
   h1 {
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
     border-bottom: none;
   }
 
