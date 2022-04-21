@@ -2,9 +2,7 @@
   <v-container>
     <LayoutsArticleListContainer :articles="articles" />
     <div v-if="is_paginated">
-      <NuxtLink v-for="number in length" :key="number" :to="`/articles/page/${number}`">
-        {{number}}
-      </NuxtLink>
+      <LayoutsPagination :page="page" :length="length" />
     </div>
   </v-container>
 </template>
@@ -22,7 +20,7 @@ export default {
     },
     length() {
       return Math.ceil(((this.article_total_count) / this.page_articles_count));
-    }
+    },
   },
   async asyncData({ params, $config: { apiSecret, apiURL } }) {
     const page_number = params.p || 1;
@@ -33,7 +31,7 @@ export default {
       axios.get(`${apiURL}/users/inarikawa/items?page=${page_number}&per_page=${page_articles_count}`, { headers: token }),
       axios.get(`${apiURL}/users/inarikawa`, { headers: token }),
     ]);
-    return { articles: response[0].data, user_data: response[1].data, page_articles_count: page_articles_count };
+    return { page: Number(page_number), articles: response[0].data, user_data: response[1].data, page_articles_count: page_articles_count };
   },
 }
 </script>
