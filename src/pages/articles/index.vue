@@ -1,9 +1,7 @@
 <template>
   <v-container>
     <LayoutsArticleListContainer :articles="articles" />
-    <div v-if="is_paginated">
-      <LayoutsPagination :page="page" :length="length" />
-    </div>
+    <LayoutsPagination v-if="is_paginated" :page="page" :length="length" />
   </v-container>
 </template>
 
