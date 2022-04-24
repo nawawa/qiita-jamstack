@@ -12,5 +12,6 @@ export default {
 <style lang="scss" scoped>
   div {
     margin: 50px 20%;
+    text-align: center;
   }
 </style>
