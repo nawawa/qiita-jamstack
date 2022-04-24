@@ -1,8 +1,6 @@
 <template>
   <div>
-    <v-row cols="6">
-      <slot />
-    </v-row>
+    <slot />
   </div>
 </template>
 
@@ -13,7 +11,6 @@ export default {
 
 <style lang="scss" scoped>
   div {
-    margin: 50px 0;
-    padding: 0 30%;
+    margin: 50px 20%;
   }
 </style>
