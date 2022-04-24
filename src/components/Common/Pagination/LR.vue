@@ -1,6 +1,7 @@
 <template>
   <v-btn
     icon
+    class="ma-3"
   >
     <div>
       <slot />
