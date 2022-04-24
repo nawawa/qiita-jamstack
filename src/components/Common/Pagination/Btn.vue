@@ -1,9 +1,10 @@
 <template>
-  <v-col>
-    <div>
-      {{ page_number }}
-    </div>
-  </v-col>
+  <v-btn
+    icon
+    class="ma-3"
+  >
+    {{ page_number }}
+  </v-btn>
 </template>
 
 <script>
@@ -13,14 +14,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-  div {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-  }
-</style>
