@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-12">
     <slot />
   </div>
 </template>
@@ -11,7 +11,6 @@ export default {
 
 <style lang="scss" scoped>
   div {
-    margin: 50px 20%;
     text-align: center;
   }
 </style>
