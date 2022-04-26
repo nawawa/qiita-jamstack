@@ -1,6 +1,7 @@
 <template>
   <v-btn
     icon
+    :x-small="xs"
     class="ma-3"
     :class="{'now_page':page_number===now_page}"
   >
@@ -14,7 +15,8 @@
 export default {
   props: {
     page_number: Number,
-    now_page: Number
+    now_page: Number,
+    xs: Boolean
   },
 }
 </script>
