@@ -1,11 +1,14 @@
 <template>
   <h1>
-    <slot />
+    {{ title }}
   </h1>
 </template>
 
 <script>
 export default {
+  props: {
+    title: String
+  }
 }
 </script>
 
@@ -14,7 +17,7 @@ export default {
     font-size: 32px;
     font-weight: bold;
     line-height: 1.4;
-    margin: 8px 0 48px;
+    margin: 8px 0 24px;
     word-break: break-all;
   }
 </style>
