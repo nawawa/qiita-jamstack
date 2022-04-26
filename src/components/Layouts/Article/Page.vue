@@ -15,8 +15,8 @@
 <script>
 export default {
   props: {
-    created_at: Array,
-    updated_at: Array,
+    created_at: Object,
+    updated_at: Object,
     title: String
   }
 }
