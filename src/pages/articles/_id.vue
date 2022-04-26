@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <article>
-      <LayoutsArticlePage :created_at="created_at" :updated_at="updated_at" :title="article.title" />
+      <LayoutsArticlePageHeader :created_at="created_at" :updated_at="updated_at" :title="article.title" />
       <CommonArticleSection v-html='article.rendered_body' />
     </article>
     <CommonArticleAside />
