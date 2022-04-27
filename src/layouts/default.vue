@@ -24,14 +24,7 @@ export default {
       drawer: false,
     }
   },
-  mounted() {
-    const is_dark_mode = this.checkBrowserIsDarkTheme;
-    this.$vuetify.theme.dark = is_dark_mode;
-  },
   computed: {
-    checkBrowserIsDarkTheme() {
-      return (window.matchMedia('(prefers-color-scheme: dark)').matches === true);
-    },
     mode() {
       return (this.$vuetify.theme.dark === true) ? "dark": "light";
     }

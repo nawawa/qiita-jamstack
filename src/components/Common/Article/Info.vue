@@ -1,6 +1,6 @@
 <template>
-  <v-row dense no-gutters>
-    <v-col cols='6'>
+  <v-row dense no-gutters class="mb-2 mt-4">
+    <v-col :cols="cols">
       <div>
         <p>
           {{created_at.year}}
@@ -12,7 +12,7 @@
         </p>
       </div>
     </v-col>
-    <v-col cols='6'>
+    <v-col :cols="cols">
       <div>
         <p>
           {{updated_at.year}}
@@ -32,6 +32,12 @@ export default {
   props: {
     created_at: Object,
     updated_at: Object,
+    xs: Boolean
+  },
+  computed: {
+    cols() {
+      return (this.xs)? 6: 2;
+    }
   }
 }
 </script>
