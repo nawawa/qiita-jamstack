@@ -17,7 +17,7 @@ export default {
     font-size: 32px;
     font-weight: bold;
     line-height: 1.4;
-    margin: 8px 0 24px;
+    margin: 8px 0 48px;
     word-break: break-all;
   }
 </style>
