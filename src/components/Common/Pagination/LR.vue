@@ -3,6 +3,7 @@
     icon
     :x-small="xs"
     class="ma-3"
+    :disabled="disabled"
   >
     <div>
       <slot />
@@ -13,7 +14,10 @@
 <script>
 export default {
   props: {
-    xs: Boolean
+    xs: Boolean,
+    left: Boolean,
+    right: Boolean,
+    disabled: Boolean
   }
 }
 </script>
