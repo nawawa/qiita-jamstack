@@ -1,10 +1,10 @@
 <template>
   <CommonPaginationContainer>
-    <CommonPaginationREADMORE>
-      <NuxtLink to="/articles/page/2">
-        READ MORE
-      </NuxtLink>
+    <NuxtLink to="/articles/page/2">
+      <CommonPaginationREADMORE>
+          READ MORE
     </CommonPaginationREADMORE>
+    </NuxtLink>
   </CommonPaginationContainer>
 </template>
 
